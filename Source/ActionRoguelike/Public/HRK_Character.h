@@ -20,6 +20,11 @@ public:
 
 protected:
 
+	UPROPERTY(EditAnywhere)
+	TSubclassOf<AActor> ProjectileClass;
+
+protected:
+
 	UPROPERTY(VisibleAnywhere)
 	USpringArmComponent* SpringArmComponent;
 
@@ -30,6 +35,8 @@ protected:
 	virtual void BeginPlay() override;
 
 	void MoveForward(float Value);
+	void MoveRight(float Value);
+	void PrimaryAttack();
 
 public:	
 	// Called every frame
